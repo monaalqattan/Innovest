@@ -42,7 +42,7 @@ body {
 .right-box p {
   text-align: center;
   color: #666;
-  margin-top: -10px;
+  margin-top: 2px;
   margin-bottom: 20px;
 }
 
@@ -70,6 +70,24 @@ form input {
   font-size: 14px;
 }
 
+/* FORGOT PASSWORD */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+
+.forgot-password a {
+  color: #c3a675;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
 /* MAIN BUTTON */
 .main-btn {
   width: 100%;
@@ -81,6 +99,10 @@ form input {
   font-size: 16px;
   margin-top: 10px;
   cursor: pointer;
+}
+
+.main-btn:hover {
+  background: #b39564;
 }
 
 /* GOOGLE BUTTON */
@@ -95,6 +117,10 @@ form input {
   cursor: pointer;
 }
 
+.google-btn:hover {
+  background: #c23321;
+}
+
 /* FACEBOOK BUTTON */
 .facebook-btn {
   width: 100%;
@@ -107,8 +133,12 @@ form input {
   cursor: pointer;
 }
 
+.facebook-btn:hover {
+  background: #0c63d4;
+}
+
 .bottom-text {
-  margin-top: 20px;
+  margin-top: 4rem;
   text-align: center;
   color: #666;
 }
@@ -116,6 +146,11 @@ form input {
 .bottom-text a {
   color: #000;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.bottom-text a:hover {
+  text-decoration: underline;
 }
 
 /* RESPONSIVE */

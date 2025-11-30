@@ -1,8 +1,19 @@
+import { useNavigate } from 'react-router-dom';
 import Navbar from "../component/Navbar";
 import Logo from '../assets/Generated Image August 30, 2025 - 1_41PM 1 (2).png'
 import Footer from "../component/Footer";
 
 const Landingpage = () => {
+  const navigate = useNavigate();
+
+  const handleSignupNavigation = () => {
+    navigate('/signup');
+  };
+
+  const handleHomepageNavigation = () => {
+    navigate('/homepage');
+  };
+
   return (
     <div style={{ fontFamily: "'Inter', -apple-system, sans-serif", backgroundColor: '#f4f4f4' }}>
       <Navbar 
@@ -52,30 +63,48 @@ const Landingpage = () => {
             Showcase your project to potential investors and grow your idea into a success. Join thousands of entrepreneurs transforming their vision into reality.
           </p>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <button style={{
-              background: 'linear-gradient(135deg, #43b581 0%, #369e6e 100%)',
-              color: '#fff',
-              fontWeight: '700',
-              borderRadius: '14px',
-              padding: '16px 36px',
-              border: 'none',
-              cursor: 'pointer',
-              fontSize: '17px',
-              boxShadow: '0 8px 20px rgba(67, 181, 129, 0.4)'
-            }}>
+            <button 
+              onClick={handleSignupNavigation}
+              style={{
+                background: 'linear-gradient(135deg, #43b581 0%, #369e6e 100%)',
+                color: '#fff',
+                fontWeight: '700',
+                borderRadius: '14px',
+                padding: '16px 36px',
+                border: 'none',
+                cursor: 'pointer',
+                fontSize: '17px',
+                boxShadow: '0 8px 20px rgba(67, 181, 129, 0.4)',
+                transition: 'transform 0.2s'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
               Try for Free
             </button>
-            <button style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              color: '#fff',
-              fontWeight: '700',
-              borderRadius: '14px',
-              padding: '16px 36px',
-              border: '2px solid rgba(255, 255, 255, 0.5)',
-              cursor: 'pointer',
-              fontSize: '17px',
-              backdropFilter: 'blur(10px)'
-            }}>
+            <button 
+              onClick={handleHomepageNavigation}
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                color: '#fff',
+                fontWeight: '700',
+                borderRadius: '14px',
+                padding: '16px 36px',
+                border: '2px solid rgba(255, 255, 255, 0.5)',
+                cursor: 'pointer',
+                fontSize: '17px',
+                backdropFilter: 'blur(10px)',
+                transition: 'all 0.3s'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+              }}
+            >
               See How It Works →
             </button>
           </div>
@@ -93,7 +122,7 @@ const Landingpage = () => {
           fontSize: '64px',
        
         }}>
-       <img src={Logo}   width={460}/>
+       <img src={Logo} width={460} alt="Innovest Logo" />
         </div>
       </section>
 
@@ -130,18 +159,30 @@ const Landingpage = () => {
         }}>
           Join us and unlock new opportunities for your startup or investment journey. Connect with like-minded innovators and investors who share your passion for growth.
         </p>
-        <button style={{
-          borderRadius: '50px',
-          padding: '16px 40px',
-          fontWeight: '700',
-          border: '2px solid #0d5675',
-          color: '#0d5675',
-          backgroundColor: 'transparent',
-          cursor: 'pointer',
-          marginTop: '30px',
-          fontSize: '16px',
-          boxShadow: '0 4px 15px rgba(13, 86, 117, 0.2)'
-        }}>
+        <button 
+          onClick={handleSignupNavigation}
+          style={{
+            borderRadius: '50px',
+            padding: '16px 40px',
+            fontWeight: '700',
+            border: '2px solid #0d5675',
+            color: '#0d5675',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            marginTop: '30px',
+            fontSize: '16px',
+            boxShadow: '0 4px 15px rgba(13, 86, 117, 0.2)',
+            transition: 'all 0.3s'
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = '#0d5675';
+            e.currentTarget.style.color = '#fff';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.color = '#0d5675';
+          }}
+        >
           Join Now
         </button>
       </section>
@@ -169,18 +210,30 @@ const Landingpage = () => {
         }}>
           We empower startups by connecting them with investors who believe in their vision. Our platform provides the tools, resources, and network you need to succeed.
         </p>
-        <button style={{
-          borderRadius: '50px',
-          padding: '16px 40px',
-          fontWeight: '700',
-          border: '2px solid #0d5675',
-          color: '#0d5675',
-          backgroundColor: 'transparent',
-          cursor: 'pointer',
-          marginTop: '30px',
-          fontSize: '16px',
-          boxShadow: '0 4px 15px rgba(13, 86, 117, 0.2)'
-        }}>
+        <button 
+          onClick={handleSignupNavigation}
+          style={{
+            borderRadius: '50px',
+            padding: '16px 40px',
+            fontWeight: '700',
+            border: '2px solid #0d5675',
+            color: '#0d5675',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            marginTop: '30px',
+            fontSize: '16px',
+            boxShadow: '0 4px 15px rgba(13, 86, 117, 0.2)',
+            transition: 'all 0.3s'
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = '#0d5675';
+            e.currentTarget.style.color = '#fff';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.color = '#0d5675';
+          }}
+        >
           Get Started
         </button>
       </section>
@@ -208,18 +261,30 @@ const Landingpage = () => {
         }}>
           Innovest offers a comprehensive suite of tools for startups to present their projects effectively. Analytics, pitch builders, and direct investor communication all in one place.
         </p>
-        <button style={{
-          borderRadius: '50px',
-          padding: '16px 40px',
-          fontWeight: '700',
-          border: '2px solid #0d5675',
-          color: '#0d5675',
-          backgroundColor: 'transparent',
-          cursor: 'pointer',
-          marginTop: '30px',
-          fontSize: '16px',
-          boxShadow: '0 4px 15px rgba(13, 86, 117, 0.2)'
-        }}>
+        <button 
+          onClick={handleHomepageNavigation}
+          style={{
+            borderRadius: '50px',
+            padding: '16px 40px',
+            fontWeight: '700',
+            border: '2px solid #0d5675',
+            color: '#0d5675',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            marginTop: '30px',
+            fontSize: '16px',
+            boxShadow: '0 4px 15px rgba(13, 86, 117, 0.2)',
+            transition: 'all 0.3s'
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = '#0d5675';
+            e.currentTarget.style.color = '#fff';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.color = '#0d5675';
+          }}
+        >
           Explore Features
         </button>
       </section>
@@ -395,7 +460,7 @@ const Landingpage = () => {
           ))}
         </div>
       </section>
-<Footer />
+      <Footer />
     </div>
   );
 };

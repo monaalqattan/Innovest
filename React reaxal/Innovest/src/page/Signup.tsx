@@ -1,14 +1,18 @@
-
 import "../styles/Siginup.css";
+import rectangleImage from "../assets/Rectangle 55.png";
 
-const Signup= () => {
+const Signup = () => {
   return (
     
     <div className="signup-container">
 
       {/* LEFT IMAGE */}
       <div className="left-box">
-        <img src="/img/Rectangle 55.png" className="img-fluid" alt="Signup" />
+        <img 
+          src={rectangleImage} 
+          className="img-fluid" 
+          alt="Login illustration" 
+        />
       </div>
 
       {/* RIGHT FORM */}
@@ -17,35 +21,33 @@ const Signup= () => {
           <i className="fa-solid fa-arrow-left"></i> Back to Website
         </a>
 
-        <h2>Welcome</h2>
-        <p>Create your new account</p>
+        <h2>Welcome Back</h2>
+        <p>Log in to your account</p>
 
         <form>
-          <label>Full Name</label>
-          <input type="text" placeholder="Abdulrahman Elnady" />
-
           <label>Email</label>
           <input type="email" placeholder="example@gmail.com" />
 
           <label>Password</label>
           <input type="password" placeholder="••••••••" />
 
-          <label>Confirm Password</label>
-          <input type="password" placeholder="••••••••" />
+          <div className="forgot-password">
+            <a href="#">Forgot Password?</a>
+          </div>
 
-          <button type="submit" className="main-btn">Sign Up</button>
+          <button type="submit" className="main-btn">Log In</button>
 
           <button type="button" className="google-btn">
-            <i className="fa-brands fa-google"></i> Sign up with Google
+            <i className="fa-brands fa-google"></i> Log in with Google
           </button>
 
           <button type="button" className="facebook-btn">
-            <i className="fa-brands fa-facebook"></i> Sign up with Facebook
+            <i className="fa-brands fa-facebook"></i> Log in with Facebook
           </button>
         </form>
 
         <p className="bottom-text">
-          Already have an account? <a href="#">Log in</a>
+          Don't have an account? <a href="#">Sign up</a>
         </p>
       </div>
 
